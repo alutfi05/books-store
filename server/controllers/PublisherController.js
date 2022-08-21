@@ -1,5 +1,5 @@
-class BookController {
-    static async getBooks(req, res) {}
+class PublisherController {
+    static async getPublishers(req, res) {}
 
     static async create(req, res) {}
 
@@ -10,4 +10,4 @@ class BookController {
     static async delete(req, res) {}
 }
 
-module.exports = BookController;
+module.exports = PublisherController;
