@@ -4,7 +4,7 @@
 
 ```bash
 
-pnx sequelize-cli db:create
+npx sequelize-cli db:create
 
 npx sequelize-cli model:generate --name author --attributes name:string,dateOfBirth:date,age:integer,city:string
 
