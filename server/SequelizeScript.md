@@ -12,8 +12,8 @@ npx sequelize-cli model:generate --name book --attributes title:string,synopsis:
 
 npx sequelize-cli model:generate --name category --attributes name:string
 
-npx sequelize-cli db:migrate
-
 npx sequelize-cli model:generate --name publisher --attributes name:string
+
+npx sequelize-cli db:migrate
 
 ```
