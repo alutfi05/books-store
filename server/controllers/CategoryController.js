@@ -14,15 +14,7 @@ class CategoryController {
 
     static async create(req, res) {
         try{
-            // const {name} = req.body;
-            // if(name !== category.findOrCreate({where: {name}})){
-            //     const newCategory = await category.create({name});
-            //     res.status(201).json(newCategory);
-            // }else{
-            //     res.status(409).json({
-            //         message: 'Category already exist'
-            //     });
-            // }
+           
             const newCategory = await category.findOrCreate({where: req.body});
             res.status(201).json(newCategory);
 
