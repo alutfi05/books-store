@@ -14,9 +14,9 @@ class CategoryController {
 
     static async create(req, res) {
         try{
-           
-            const newCategory = await category.findOrCreate({where: req.body});
-            res.status(201).json(newCategory);
+            const {name} = req.body;
+            const newCategory = await category.findOrCreate({where: {name}});
+            res.status(201).json(newCategory, {message: 'Category created'});
 
         }catch(err){
             res.status(500).json({
@@ -27,8 +27,9 @@ class CategoryController {
 
     static async detail(req, res) {
         try{
-            const categories = await category.findOne({where: {id: req.params.id}});
-            res.status(200).json(categories);
+            const {categoryId} = +req.params.id;
+            const findCategory = await category.findOne({where: {categoryId}});
+            res.status(200).json(findCategory);
         }catch(err){
             res.status(500).json({
                 message: err.message
@@ -38,8 +39,10 @@ class CategoryController {
 
     static async edit(req, res) {
         try{
-            const updateCategories = await category.update(req.body, {where: {id: req.params.id}});
-            res.status(200).json(updateCategories);
+            const {categoryId} = +req.params.id;
+            const {name} = req.body;
+            const updateCategory = await category.update({name}, {where: {categoryId}});
+            res.status(200).json(updateCategory, {message: 'Category updated'});
         }catch(err){
             res.status(500).json({
                 message: err.message
@@ -49,8 +52,9 @@ class CategoryController {
 
     static async delete(req, res) {
         try{
-            const deleteCategories = await category.destroy({where: {id: req.params.id}});
-            res.status(200).json(deleteCategories);
+            const {categoryId} = +req.params.id;
+            const deleteCategory = await category.destroy({where: {categoryId}});
+            res.status(200).json(deleteCategory,{message: 'Category deleted'});
         }catch(err){
             res.status(500).json({
                 message: err.message

@@ -14,8 +14,9 @@ class PublisherController {
 
     static async create(req, res) {
         try{
-            const newPublisher = await publisher.findOrCreate(req.body);
-            res.status(201).json(newPublisher);
+            const {name} = req.body;
+            const newPublisher = await publisher.findOrCreate({name});
+            res.status(201).json(newPublisher, {message: 'Publisher created'});
         }catch(err){
             res.status(500).json({
                 message: err.message
@@ -25,8 +26,8 @@ class PublisherController {
 
     static async detail(req, res) {
         try{
-            const publisher = await publisher.findOne({where: {id: req.params.id}});
-            res.status(200).json(publisher);
+            const findPublisher = await publisher.findOne({where: {id: req.params.id}});
+            res.status(200).json(findPublisher);
         }catch(err){
             res.status(500).json({
                 message: err.message
@@ -36,8 +37,10 @@ class PublisherController {
 
     static async edit(req, res) {
         try{
-            const updatePublisher = await publisher.update(req.body, {where: {id: req.params.id}});
-            res.status(200).json(updatePublisher);
+            const {publisherId} = +req.params.id;
+            const {name} = req.body;
+            const updatePublisher = await publisher.update({name}, {where: {publisherId}});
+            res.status(200).json(updatePublisher, {message: 'Publisher updated'});
         }catch(err){
             res.status(500).json({
                 message: err.message
@@ -47,8 +50,9 @@ class PublisherController {
 
     static async delete(req, res) {
         try{
-            const deletePublisher = await publisher.destroy({where: {id: req.params.id}});
-            res.status(200).json(deletePublisher);
+            const {publisherId} = +req.params.id;
+            const deletePublisher = await publisher.destroy({where: {publisherId}});
+            res.status(200).json(deletePublisher, {message: 'Publisher deleted'});
         }catch(err){
             res.status(500).json({
                 message: err.message
