@@ -85,7 +85,9 @@ module.exports = (sequelize, DataTypes) => {
         {
             hooks: {
                 beforeCreate: (book, options) => {
-                    book.image = "https://via.placeholder.com/150";
+                    if (book.image === null) {
+                        book.image = "https://via.placeholder.com/150";
+                    }
                 },
             },
             sequelize,

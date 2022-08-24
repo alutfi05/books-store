@@ -18,7 +18,6 @@ class BookController {
         try {
             const {
                 title,
-                image,
                 synopsis,
                 price,
                 publicationYear,
@@ -26,6 +25,12 @@ class BookController {
                 authorId,
                 publisherId,
             } = req.body;
+
+            let image = null;
+
+            if (req.file && req.file["filename"] !== undefined) {
+                image = req.file["filename"];
+            }
 
             let newBook = await book.create({
                 title,
