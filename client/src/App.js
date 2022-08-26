@@ -4,13 +4,13 @@ import "bootstrap/dist/js/bootstrap.js";
 import "./App.css";
 import { Navbar, MainContent } from "./components";
 
-function App() {
+const App = () => {
     return (
         <div>
             <Navbar />
             <MainContent />
         </div>
     );
-}
+};
 
 export default App;

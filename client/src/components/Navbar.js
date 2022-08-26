@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BsSearch } from "react-icons/bs";
 
 const Navbar = () => {
     return (
@@ -22,47 +21,25 @@ const Navbar = () => {
                     >
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto fw-semibold">
-                            <li class="nav-item me-3">
-                                <Link
-                                    class="nav-link active"
-                                    aria-current="page"
-                                    to="/books"
-                                >
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav ms-auto fw-semibold">
+                            <li className="nav-item me-3">
+                                <Link className="nav-link active" to="/books">
                                     Books List
                                 </Link>
                             </li>
-                            <li class="nav-item dropdown me-3">
-                                <Link
-                                    class="nav-link dropdown-toggle"
-                                    to="/categories"
-                                    role="button"
-                                    data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                >
+                            <li className="nav-item me-3">
+                                <Link className="nav-link" to="/categories">
                                     Category
                                 </Link>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <Link class="dropdown-item" to="#">
-                                            Komik
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link class="dropdown-item" to="#">
-                                            Novel
-                                        </Link>
-                                    </li>
-                                </ul>
                             </li>
-                            <li class="nav-item me-3">
-                                <Link class="nav-link" to="/authors">
+                            <li className="nav-item me-3">
+                                <Link className="nav-link" to="/authors">
                                     Author
                                 </Link>
                             </li>
-                            <li class="nav-item me-3">
-                                <Link class="nav-link" to="/publishers">
+                            <li className="nav-item me-3">
+                                <Link className="nav-link" to="/publishers">
                                     Publisher
                                 </Link>
                             </li>
