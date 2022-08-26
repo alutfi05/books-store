@@ -4,7 +4,7 @@ class AuthorController {
     static async getAuthors(req, res) {
         try {
             let authors = await author.findAll({
-                order: [["id", "asc"]],
+                order: [["id", "desc"]],
                 include: [book],
             });
 
