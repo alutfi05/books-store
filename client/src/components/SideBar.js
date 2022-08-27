@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
-  faBriefcase,
-  faPaperPlane,
-  faQuestion,
-  faImage,
+  faBook,
+  faAt,
   faTimes,
+  faBuilding,
+  faListAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "bootstrap";
 
@@ -30,29 +30,29 @@ const SideBar = () => {
         </div>
         <div>
           <Link to="/">
-            <FontAwesomeIcon icon={faBriefcase} className="mr-2" />
-            About
+            <FontAwesomeIcon icon={faBook} className="mr-2" />
+            Book
           </Link>
         </div>
 
         <div>
           <Link to="/">
-            <FontAwesomeIcon icon={faImage} className="mr-2" />
-            Portfolio
+            <FontAwesomeIcon icon={faBuilding} className="mr-2" />
+            Publisher
           </Link>
         </div>
 
         <div>
           <Link to="/">
-            <FontAwesomeIcon icon={faQuestion} className="mr-2" />
-            FAQ
+            <FontAwesomeIcon icon={faAt} className="mr-2" />
+            Author
           </Link>
         </div>
 
         <div>
           <Link to="/">
-            <FontAwesomeIcon icon={faPaperPlane} className="mr-2" />
-            Contact
+            <FontAwesomeIcon icon={faListAlt} className="mr-2" />
+            Category
           </Link>
         </div>
       </div>
