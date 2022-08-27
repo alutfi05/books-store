@@ -1,16 +1,16 @@
 import axios from "axios";
 import Swal from "sweetalert2";
 
-const URL = "http://localhost:3000/api/books";
+const URL = "http://localhost:3001/api/books";
 
 const getBooks = async (cb) => {
   try {
-    let publishers = await axios({
+    let books = await axios({
       method: "GET",
       url: URL,
     });
 
-    cb(publishers.data);
+    cb(books.data);
   } catch (error) {
     console.log(error);
   }
