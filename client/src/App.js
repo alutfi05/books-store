@@ -5,12 +5,13 @@ import "./App.css";
 import { Navbar, MainContent } from "./components";
 
 const App = () => {
-    return (
-        <div>
-            <Navbar />
-            <MainContent />
-        </div>
-    );
+  return (
+    <div>
+      <Navbar />
+
+      <MainContent />
+    </div>
+  );
 };
 
 export default App;
