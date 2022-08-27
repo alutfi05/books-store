@@ -4,7 +4,7 @@ class CategoryController {
     static async getCategories(req, res) {
         try {
             let categories = await category.findAll({
-                order: [["id", "desc"]],
+                order: [["id", "asc"]],
                 include: [book],
             });
 
