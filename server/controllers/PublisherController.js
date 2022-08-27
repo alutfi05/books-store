@@ -4,7 +4,7 @@ class PublisherController {
     static async getPublishers(req, res) {
         try {
             let publishers = await publisher.findAll({
-                order: [["id", "asc"]],
+                order: [["id", "desc"]],
                 include: [book],
             });
 

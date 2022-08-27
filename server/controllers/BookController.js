@@ -4,7 +4,7 @@ class BookController {
     static async getBooks(req, res) {
         try {
             let books = await book.findAll({
-                order: [["id", "asc"]],
+                order: [["id", "desc"]],
                 include: [category, author, publisher],
             });
 
