@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 
 const URL = "http://localhost:3000/api/publishers";
 
-const getPublisher = async (cb) => {
+const getPublishers = async (cb) => {
     try {
         let publishers = await axios({
             method: "GET",
@@ -90,7 +90,7 @@ const detailPublisher = async (id, cb) => {
 };
 
 export {
-    getPublisher,
+    getPublishers,
     addPublisher,
     editPublisher,
     removePublisher,

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { getPublisher, removePublisher } from "../../axios/publisherAxios";
+import { getPublishers, removePublisher } from "../../axios/publisherAxios";
 import { ImUserPlus } from "react-icons/im";
 import { MdModeEdit } from "react-icons/md";
 import { RiDeleteBin5Fill } from "react-icons/ri";
@@ -11,7 +11,7 @@ const ListPublishers = () => {
 
     useEffect(() => {
         // callback untuk mengambil data publisher dari folder axios
-        getPublisher((result) => setPublishers(result));
+        getPublishers((result) => setPublishers(result));
     }, []);
 
     const deleteHandler = (id) => {

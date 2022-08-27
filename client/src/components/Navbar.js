@@ -24,7 +24,7 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav ms-auto fw-semibold">
                             <li className="nav-item me-3">
-                                <Link className="nav-link active" to="/books">
+                                <Link className="nav-link" to="/books">
                                     Books List
                                 </Link>
                             </li>

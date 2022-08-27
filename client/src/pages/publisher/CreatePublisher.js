@@ -22,7 +22,7 @@ const CreatePublisher = () => {
                 <h4 className="fw-bold" style={{ color: "var(--black)" }}>
                     Create a publisher
                 </h4>
-                <p className="medium">Les't get started with us</p>
+                <p className="medium">Let's get started with us</p>
             </div>
             <div className="w-50 mx-auto">
                 <div className="mb-3">
@@ -48,7 +48,7 @@ const CreatePublisher = () => {
                 <div className="mb-3">
                     <button
                         onClick={() => submitHandler()}
-                        className="btn"
+                        className="btn btn-sm"
                         style={{
                             backgroundColor: "var(--blue)",
                             color: "#fff",
@@ -61,7 +61,7 @@ const CreatePublisher = () => {
                     </button>
                     <Link
                         to="/publishers"
-                        className="btn ms-2"
+                        className="btn btn-sm ms-2"
                         style={{
                             backgroundColor: "var(--red)",
                             color: "#fff",
