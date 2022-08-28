@@ -73,7 +73,12 @@
                 "summary": "",
                 "description": "",
                 "responses": {
-                    "201": {},
+                    "200": {
+                        "description": "category edit successfully"
+                    },
+                    "404": {
+                        "description": "kategori tidak ditemukan"
+                    },
                     "500": "err Found"
                 }
             }
@@ -86,7 +91,12 @@
                 "summary": "",
                 "description": "",
                 "responses": {
-                    "201": {},
+                    "200": {
+                        "description": "category deleted successfully"
+                    },
+                    "404": {
+                        "description": "kategori tidak ditemukan"
+                    },
                     "500": "err Found"
                 }
             }
@@ -100,7 +110,7 @@
                 "description": "",
                 "responses": {
                     "200": {
-                        "description": ""
+                        "description": "menampilkan semua authors"
                     },
                     "500": "err Found"
                 }
@@ -114,7 +124,9 @@
                 "summary": "",
                 "description": "",
                 "responses": {
-                    "201": {},
+                    "201": {
+                        "description": "author created successfully"
+                    },
                     "500": "err Found"
                 }
             }
@@ -127,7 +139,12 @@
                 "summary": "",
                 "description": "",
                 "responses": {
-                    "201": {},
+                    "200": {
+                        "description": "menampilkan detail dari author bedasarkan Id"
+                    },
+                    "404": {
+                        "description": "author tidak ditemukan"
+                    },
                     "500": "err Found"
                 }
             }
@@ -140,7 +157,12 @@
                 "summary": "",
                 "description": "",
                 "responses": {
-                    "201": {},
+                    "200": {
+                        "description": "author deleted successfully"
+                    },
+                    "404": {
+                        "description": "author tidak ditemukan"
+                    },
                     "500": "err Found"
                 }
             }
@@ -153,7 +175,12 @@
                 "summary": "",
                 "description": "",
                 "responses": {
-                    "201": {},
+                    "200": {
+                        "description": "author deleted successfully"
+                    },
+                    "404": {
+                        "description": "kategori tidak ditemukan"
+                    },
                     "500": "err Found"
                 }
             }
@@ -167,7 +194,7 @@
                 "description": "",
                 "responses": {
                     "200": {
-                        "description": ""
+                        "description": "menampilkan semua books"
                     },
                     "500": "err Found"
                 }
@@ -181,7 +208,9 @@
                 "summary": "",
                 "description": "",
                 "responses": {
-                    "201": {},
+                    "201": {
+                        "description": "books has been created successfully"
+                    },
                     "500": "err Found"
                 }
             }
@@ -194,7 +223,12 @@
                 "summary": "",
                 "description": "",
                 "responses": {
-                    "201": {},
+                    "200": {
+                        "description": "menampilkan detail dari books bedasarkan Id"
+                    },
+                    "404": {
+                        "description": "book tidak ditemukan"
+                    },
                     "500": "err Found"
                 }
             }
@@ -207,7 +241,12 @@
                 "summary": "",
                 "description": "",
                 "responses": {
-                    "201": {},
+                    "200": {
+                        "description": "books edited successfully"
+                    },
+                    "404": {
+                        "description": "books tidak ditemukan"
+                    },
                     "500": "err Found"
                 }
             }
@@ -220,7 +259,12 @@
                 "summary": "",
                 "description": "",
                 "responses": {
-                    "201": {},
+                    "200": {
+                        "description": "books deleted successfully"
+                    },
+                    "404": {
+                        "description": "books tidak ditemukan"
+                    },
                     "500": "err Found"
                 }
             }
@@ -234,7 +278,7 @@
                 "description": "",
                 "responses": {
                     "200": {
-                        "description": ""
+                        "description": "menampilkan semua publisher"
                     },
                     "500": "err Found"
                 }
@@ -248,7 +292,9 @@
                 "summary": "",
                 "description": "",
                 "responses": {
-                    "201": {},
+                    "201": {
+                        "description": "publisher created successfully"
+                    },
                     "500": "err Found"
                 }
             }
@@ -261,7 +307,12 @@
                 "summary": "",
                 "description": "",
                 "responses": {
-                    "201": {},
+                    "200": {
+                        "description": "menampilkan detail dari publisher bedasarkan Id"
+                    },
+                    "404": {
+                        "description": "publisher tidak ditemukan"
+                    },
                     "500": "err Found"
                 }
             }
@@ -274,7 +325,12 @@
                 "summary": "",
                 "description": "",
                 "responses": {
-                    "201": {},
+                    "200": {
+                        "description": "publisher edited successfully"
+                    },
+                    "404": {
+                        "description": "publisher tidak ditemukan"
+                    },
                     "500": "err Found"
                 }
             }
@@ -287,7 +343,12 @@
                 "summary": "",
                 "description": "",
                 "responses": {
-                    "201": {},
+                    "200": {
+                        "description": "publisher deleted successfully"
+                    },
+                    "404": {
+                        "description": "publisher tidak ditemukan"
+                    },
                     "500": "err Found"
                 }
             }
