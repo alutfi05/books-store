@@ -2,13 +2,295 @@
     "swagger": "2.0",
     "info": {
         "version": "1.0",
-        "title": "Clothes Stores Basic CRUD API with express.js"
+        "title": "Books Store Basic CRUD API with express.js"
     },
     "host": "",
-    "basePath": "https://clothes-stores.herokuapp.com/",
+    "basePath": "/api/",
     "securityDefinitions": {},
-    "schemes": ["https"],
-    "consumes": ["application/json"],
-    "produces": ["application/json"],
-    "paths": {}
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/categories": {
+            "get": {
+                "tags": [
+                    "categories"
+                ],
+                "summary": "",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "tampilin semua kategori"
+                    },
+                    "500": "error Found"
+                }
+            }
+        },
+        "/categories/create": {
+            "post": {
+                "tags": [
+                    "categories"
+                ],
+                "summary": "",
+                "description": "",
+                "responses": {
+                    "201": {
+                        "description": "status category ditambahkan"
+                    },
+                    "500": "err Found"
+                }
+            }
+        },
+        "/categories/details/:{categoryId}": {
+            "get": {
+                "tags": [
+                    "categories"
+                ],
+                "summary": "",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "ditampilkan detail dari sebuah kategori"
+                    },
+                    "404": {
+                        "description": "kategori tidak ditemukan"
+                    },
+                    "500": "err Found"
+                }
+            }
+        },
+        "/categories/edit/:{categoryId}": {
+            "put": {
+                "tags": [
+                    "categories"
+                ],
+                "summary": "",
+                "description": "",
+                "responses": {
+                    "201": {},
+                    "500": "err Found"
+                }
+            }
+        },
+        "/categories/delete/:{categoryId}": {
+            "delete": {
+                "tags": [
+                    "categories"
+                ],
+                "summary": "",
+                "description": "",
+                "responses": {
+                    "201": {},
+                    "500": "err Found"
+                }
+            }
+        },
+        "/authors": {
+            "get": {
+                "tags": [
+                    "authors"
+                ],
+                "summary": "",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    },
+                    "500": "err Found"
+                }
+            }
+        },
+        "/authors/create": {
+            "post": {
+                "tags": [
+                    "authors"
+                ],
+                "summary": "",
+                "description": "",
+                "responses": {
+                    "201": {},
+                    "500": "err Found"
+                }
+            }
+        },
+        "/authors/details/:{authorId}": {
+            "get": {
+                "tags": [
+                    "authors"
+                ],
+                "summary": "",
+                "description": "",
+                "responses": {
+                    "201": {},
+                    "500": "err Found"
+                }
+            }
+        },
+        "/authors/edit/:{authorId}": {
+            "put": {
+                "tags": [
+                    "authors"
+                ],
+                "summary": "",
+                "description": "",
+                "responses": {
+                    "201": {},
+                    "500": "err Found"
+                }
+            }
+        },
+        "/authors/delete/:{authorId}": {
+            "delete": {
+                "tags": [
+                    "authors"
+                ],
+                "summary": "",
+                "description": "",
+                "responses": {
+                    "201": {},
+                    "500": "err Found"
+                }
+            }
+        },
+        "/books": {
+            "get": {
+                "tags": [
+                    "books"
+                ],
+                "summary": "",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    },
+                    "500": "err Found"
+                }
+            }
+        },
+        "/books/create": {
+            "post": {
+                "tags": [
+                    "books"
+                ],
+                "summary": "",
+                "description": "",
+                "responses": {
+                    "201": {},
+                    "500": "err Found"
+                }
+            }
+        },
+        "/books/details/:{bookId}": {
+            "get": {
+                "tags": [
+                    "books"
+                ],
+                "summary": "",
+                "description": "",
+                "responses": {
+                    "201": {},
+                    "500": "err Found"
+                }
+            }
+        },
+        "/books/edit/:{bookId}": {
+            "put": {
+                "tags": [
+                    "books"
+                ],
+                "summary": "",
+                "description": "",
+                "responses": {
+                    "201": {},
+                    "500": "err Found"
+                }
+            }
+        },
+        "/books/delete/:{bookId}": {
+            "delete": {
+                "tags": [
+                    "books"
+                ],
+                "summary": "",
+                "description": "",
+                "responses": {
+                    "201": {},
+                    "500": "err Found"
+                }
+            }
+        },
+        "/publishers": {
+            "get": {
+                "tags": [
+                    "publishers"
+                ],
+                "summary": "",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    },
+                    "500": "err Found"
+                }
+            }
+        },
+        "/publishers/create": {
+            "post": {
+                "tags": [
+                    "publishers"
+                ],
+                "summary": "",
+                "description": "",
+                "responses": {
+                    "201": {},
+                    "500": "err Found"
+                }
+            }
+        },
+        "/publishers/details/:{publisherId}": {
+            "get": {
+                "tags": [
+                    "publishers"
+                ],
+                "summary": "",
+                "description": "",
+                "responses": {
+                    "201": {},
+                    "500": "err Found"
+                }
+            }
+        },
+        "/publishers/edit/:{publisherId}": {
+            "put": {
+                "tags": [
+                    "publishers"
+                ],
+                "summary": "",
+                "description": "",
+                "responses": {
+                    "201": {},
+                    "500": "err Found"
+                }
+            }
+        },
+        "/publishers/delete/:{publisherId}": {
+            "delete": {
+                "tags": [
+                    "publishers"
+                ],
+                "summary": "",
+                "description": "",
+                "responses": {
+                    "201": {},
+                    "500": "err Found"
+                }
+            }
+        }
+    }
 }
