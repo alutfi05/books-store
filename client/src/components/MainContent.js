@@ -28,7 +28,9 @@ const MainContent = () => {
                     activeClassName="active"
                     path=""
                     element={<Book />}
-                ></Route>
+                >
+                    <Route path="" element={<ListBooks />}></Route>
+                </Route>
                 <Route activeClassName="active" path="books" element={<Book />}>
                     <Route path="" element={<ListBooks />}></Route>
                     <Route path="create" element={<CreateBook />}></Route>

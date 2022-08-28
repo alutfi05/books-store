@@ -52,6 +52,10 @@ body {
     font-size: 14px;
 }
 
+.font-large {
+    font-size: 16px;
+}
+
 ul li a:hover {
     color: var(--green) !important;
 }
