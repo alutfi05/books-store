@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { getBooks, removeBook } from "../../axios/bookAxios";
 import { RiHealthBookFill } from "react-icons/ri";
 import { MdModeEdit } from "react-icons/md";
-import { BsFillInfoCircleFill } from "react-icons/bs";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import Loading from "../../helpers/Loading";
+import rupiah from "../../helpers/RupiahFormatter";
 
 const ListBooks = () => {
     const [books, setBooks] = useState([]);
@@ -65,28 +65,33 @@ const ListBooks = () => {
                             .map((book) => {
                                 const { id, title, image, price } = book;
                                 return (
-                                    <div className="col-3" key={id}>
+                                    <div className="col-3 card-book" key={id}>
                                         <div
                                             className="card mt-4 me-2 shadow p-3 mb-3 bg-body rounded"
                                             style={{ width: "18rem" }}
                                         >
-                                            <img
-                                                src={image}
-                                                className="card-img-top"
-                                                alt="..."
-                                            />
-                                            <div className="card-body">
-                                                <h5 className="card-title text-shadow">
-                                                    {title}
-                                                </h5>
-                                                <p className="card-text medium mt-3">
-                                                    {book.author.name}
-                                                </p>
-                                                <p className="text-primary fw-bold font-large">
-                                                    Rp {price}
-                                                </p>
-                                            </div>
-                                            <div class="card-footer mx-auto nav-bg">
+                                            <Link
+                                                to={`/books/detail/${id}`}
+                                                className="text-decoration-none"
+                                            >
+                                                <img
+                                                    src={image}
+                                                    className="card-img-top"
+                                                    alt="..."
+                                                />
+                                                <div className="card-body text-dark">
+                                                    <h5 className="card-title text-shadow">
+                                                        {title}
+                                                    </h5>
+                                                    <p className="card-text medium mt-3">
+                                                        {book.author.name}
+                                                    </p>
+                                                    <p className="text-primary fw-bold font-large">
+                                                        {rupiah(price)}
+                                                    </p>
+                                                </div>
+                                            </Link>
+                                            <div className="card-footer mx-auto nav-bg">
                                                 <Link
                                                     to={`/books/edit/${id}`}
                                                     className="btn btn-sm me-2 btn-warning"
@@ -105,14 +110,6 @@ const ListBooks = () => {
                                                         <RiDeleteBin5Fill />
                                                     </span>
                                                 </button>
-                                                <Link
-                                                    to={`/books/detail/${id}`}
-                                                    className="btn btn-sm me-2 btn-dark"
-                                                >
-                                                    <span>
-                                                        <BsFillInfoCircleFill />
-                                                    </span>
-                                                </Link>
                                             </div>
                                         </div>
                                     </div>

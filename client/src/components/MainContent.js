@@ -5,18 +5,22 @@ import {
     ListBooks,
     CreateBook,
     EditBook,
+    DetailBook,
     Category,
     ListCategories,
     CreateCategory,
     EditCategory,
+    DetailCategory,
     Author,
     ListAuthors,
     CreateAuthor,
     EditAuthor,
+    DetailAuthor,
     Publisher,
     ListPublishers,
     CreatePublisher,
     EditPublisher,
+    DetailPublisher,
 } from "../pages";
 
 const MainContent = () => {
@@ -37,6 +41,9 @@ const MainContent = () => {
                     <Route path="edit">
                         <Route path=":id" element={<EditBook />}></Route>
                     </Route>
+                    <Route path="detail">
+                        <Route path=":id" element={<DetailBook />}></Route>
+                    </Route>
                 </Route>
                 <Route
                     activeClassName="active"
@@ -47,6 +54,9 @@ const MainContent = () => {
                     <Route path="create" element={<CreateCategory />}></Route>
                     <Route path="edit">
                         <Route path=":id" element={<EditCategory />}></Route>
+                    </Route>
+                    <Route path="detail">
+                        <Route path=":id" element={<DetailCategory />}></Route>
                     </Route>
                 </Route>
                 <Route
@@ -59,6 +69,9 @@ const MainContent = () => {
                     <Route path="edit">
                         <Route path=":id" element={<EditAuthor />}></Route>
                     </Route>
+                    <Route path="detail">
+                        <Route path=":id" element={<DetailAuthor />}></Route>
+                    </Route>
                 </Route>
                 <Route
                     activeClassName="active"
@@ -69,6 +82,9 @@ const MainContent = () => {
                     <Route path="create" element={<CreatePublisher />}></Route>
                     <Route path="edit">
                         <Route path=":id" element={<EditPublisher />}></Route>
+                    </Route>
+                    <Route path="detail">
+                        <Route path=":id" element={<DetailPublisher />}></Route>
                     </Route>
                 </Route>
             </Routes>

@@ -4,7 +4,7 @@ import { getCategories, removeCategory } from "../../axios/categoryAxios";
 import { BiCategoryAlt } from "react-icons/bi";
 import { MdModeEdit } from "react-icons/md";
 import { RiDeleteBin5Fill } from "react-icons/ri";
-import { BsFillInfoCircleFill } from "react-icons/bs";
+import { BsBookshelf, BsFillInfoCircleFill } from "react-icons/bs";
 import Loading from "../../helpers/Loading";
 
 const ListCategories = () => {
@@ -42,10 +42,14 @@ const ListCategories = () => {
                                 return (
                                     <ul className="list-group mb-3" key={id}>
                                         <li className="list-group-item d-flex justify-content-between align-items-center">
-                                            {name}
-                                            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
-                                                {books.length}
-                                            </span>
+                                            <div>
+                                                {name}
+                                                <span className="badge text-bg-primary ms-2 rounded-pill">
+                                                    <small>
+                                                        {books.length}
+                                                    </small>
+                                                </span>
+                                            </div>
                                             <span className="me-4">
                                                 <Link
                                                     to={`/categories/detail/${id}`}

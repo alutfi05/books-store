@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { getPublishers, removePublisher } from "../../axios/publisherAxios";
 import { ImUserPlus } from "react-icons/im";
 import { MdModeEdit } from "react-icons/md";
+import { BsFillInfoCircleFill } from "react-icons/bs";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import Loading from "../../helpers/Loading";
 
@@ -69,13 +70,21 @@ const ListPublishers = () => {
                                                 onClick={() =>
                                                     deleteHandler(+id)
                                                 }
-                                                className="btn btn-sm btn-danger"
+                                                className="btn btn-sm btn-danger me-2"
                                             >
                                                 <span className="me-2">
                                                     <RiDeleteBin5Fill />
                                                 </span>
                                                 Delete
                                             </button>
+                                            <Link
+                                                to={`/publishers/detail/${id}`}
+                                                className="btn btn-sm me-2 btn-dark"
+                                            >
+                                                <span>
+                                                    <BsFillInfoCircleFill />
+                                                </span>
+                                            </Link>
                                         </div>
                                     </div>
                                 );
